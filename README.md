@@ -13,3 +13,5 @@ Sigmoid Function is used as the activation function for Neurons.
 Log10() function is used instead of Sum of Square Residuals to penalize errors heavily.
 
 Gradient Descent is implemented with mini-batches of size >= features, and weight regularization to prevent overfitting.
+
+Average Error on Unseen Examples = 10%

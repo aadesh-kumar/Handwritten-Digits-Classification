@@ -16,7 +16,7 @@ i.e each weight is uniformly distributed within [-e, +e], e = sqrt(6 / (L_in + L
 
 Sigmoid Function is used as the activation function for Neurons.
 
-Log(x) function is used instead of Sum of Square Residuals to penalize errors heavily.
+Log(x) function is used instead of Sum of Square Residuals to penalize errors more.
 
 Gradient Descent is implemented with mini-batches of size >= features, and weight regularization to prevent overfitting.
 

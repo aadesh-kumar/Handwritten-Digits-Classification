@@ -6,15 +6,15 @@
 using namespace std;
 
 // Hand Written Digit Classification
-const int MAX_ITER = 25;
-const int MAX_INPUTS = 8000;
+const int MAX_ITER = 40;
+const int MAX_INPUTS = 10400;
 const int BATCH_SIZE = 800;
 double LR = 1;
 const double LAMBDA = 0.5;
 const int FEATURES = 784;
 const int LAYERS = 3;
 const int CLASSES = 10;
-int network[] = {FEATURES, 35, CLASSES};
+int network[] = {FEATURES, 15, CLASSES};
 Mat X(2 * MAX_INPUTS, FEATURES, 0), Y(2 * MAX_INPUTS, 1, 0);
 
 Mat sig(Mat x) {
@@ -205,10 +205,10 @@ int main() {
 	}
 	randomInit(weights);
 	batchgradientDescent(weights);
-	cout << "\tCorrect\tGuess\n\n";
-	for(int i=MAX_INPUTS; i<MAX_INPUTS + 100; ++i) {
-		cout << "\t" << Y(i,0) << "\t\t";
-		cout << predict(i, weights) << "\n";
+	int error = 0;
+	for(int i=MAX_INPUTS; i<MAX_INPUTS * 2; ++i) {
+		if (Y(i,0) != predict(i, weights)) error++;
 	}
+	cout << "Percent. Error := " << double(error) / MAX_INPUTS << "\n";
 	return 0;
 }

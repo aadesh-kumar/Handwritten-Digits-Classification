@@ -10,7 +10,7 @@ These values are scaled in range [0,1] for the network.
 
 The network is structured as {784, 15, 10}
 
-The weights are initialized uniformly using Glorot Initialization.
+The weights are initialized uniformly using Glorot Randomization.
 
 i.e each weight is uniformly distributed within [-e, +e], e = sqrt(6 / (L_in + L_out))
 

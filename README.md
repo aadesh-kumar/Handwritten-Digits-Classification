@@ -10,7 +10,7 @@ The image cells are mean normalized in range [-1,1] for prevention of Exploding 
 
 ## Neural Network
 
-The network is structured as ${784, 15, 10}$ The weights are initialized uniformly using Glorot Randomization i.e each weight is uniformly distributed within $[-e, +e]$ $$e = \sqrt{6 \over (L_in + L_out)}$$. Weight regularization is implemented to prevent overfitting. Gradient Descent is implemented with mini-batches (BATCH_SIZE >= 784)
+The network is structured as $(784, 15, 10)$ The weights are initialized uniformly using Glorot Randomization i.e each weight is uniformly distributed within $[-e, +e]$ $$e = \sqrt{6 \over (L_in + L_out)}$$. Weight regularization is implemented to prevent overfitting. Gradient Descent is implemented with mini-batches (BATCH_SIZE >= 784)
 
 ## Activation Function
 
